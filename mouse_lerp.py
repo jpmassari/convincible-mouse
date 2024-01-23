@@ -35,8 +35,8 @@ def lerp(x, y):
     path = __quadratic_bezier(p0, p1, p2)
     
     for x, y in path:
-        ctypes.windll.user32.SetCursorPos(round(x), round(y))
+        ctypes.windll.user32.SetCursorPos(int(x), int(y))
     #make sure cursor's precisely at the right position
-    ctypes.windll.user32.SetCursorPos(x, y)
+    ctypes.windll.user32.SetCursorPos(int(x), int(y))
 
     
